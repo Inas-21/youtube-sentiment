@@ -1,0 +1,45 @@
+# --- Python ---
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Environnement virtuel (géré par uv) ---
+.venv/
+
+# --- Secrets ---
+.env
+.env.*
+*.token
+
+# --- Données (re-générables via les scripts) ---
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# --- Logs ---
+logs/*
+!logs/.gitkeep
+
+# --- Modèles : les .joblib finaux SONT versionnés (livrable + déploiement HF)
+models/*.tmp
+models/checkpoints/
+
+# --- Extension packagée ---
+*.zip
+*.crx
+*.pem
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Énoncé du TP (non versionné)
+TP_cloudComputing*.pdf
