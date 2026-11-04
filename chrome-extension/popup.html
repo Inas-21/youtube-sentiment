@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>YouTube Sentiment Analyzer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <img src="icons/icon48.png" alt="" class="logo">
+    <h1>Sentiment Analyzer</h1>
+    <button id="settingsBtn" class="icon-btn" title="Paramètres" aria-label="Paramètres">⚙</button>
+    <button id="themeBtn" class="icon-btn" title="Mode sombre / clair" aria-label="Changer de thème">🌙</button>
+  </header>
+
+  <section id="settings" class="card settings" hidden>
+    <label>URL de l'API
+      <input id="apiUrl" type="url" placeholder="http://localhost:8000">
+    </label>
+    <div class="row">
+      <label>Commentaires max
+        <select id="maxComments">
+          <option value="50">50</option>
+          <option value="100">100</option>
+          <option value="200">200</option>
+          <option value="500">500</option>
+        </select>
+      </label>
+      <button id="testApiBtn" class="btn btn-secondary">Tester l'API</button>
+    </div>
+    <label class="check"><input id="includeReplies" type="checkbox"> Inclure les réponses (threads dépliés)</label>
+    <label class="check"><input id="autoScroll" type="checkbox"> Défiler automatiquement pour charger plus de commentaires</label>
+    <p id="apiStatus" class="muted small"></p>
+  </section>
+
+  <main>
+    <button id="analyzeBtn" class="btn btn-primary">Analyser les commentaires</button>
+
+    <div id="loading" class="status" hidden>
+      <span class="spinner"></span><span id="loadingText">Chargement…</span>
+    </div>
+    <div id="error" class="error" role="alert" hidden></div>
+
+    <section id="results" hidden>
+      <div class="video">
+        <p id="videoTitle" class="video-title"></p>
+        <p id="metaLine" class="muted small"></p>
+      </div>
+
+      <div class="card summary">
+        <svg id="donut" viewBox="0 0 100 100" class="donut" aria-label="Répartition des sentiments"></svg>
+        <div class="summary-side">
+          <p class="dominant">Tendance : <strong id="dominant"></strong></p>
+          <ul id="legend" class="legend"></ul>
+        </div>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi"><span id="kpiTotal" class="kpi-value"></span><span class="kpi-label">commentaires</span></div>
+        <div class="kpi"><span id="kpiScore" class="kpi-value"></span><span class="kpi-label">score (-1 à 1)</span></div>
+        <div class="kpi"><span id="kpiConfidence" class="kpi-value"></span><span class="kpi-label">confiance moy.</span></div>
+      </div>
+
+      <div class="toolbar">
+        <div id="filters" class="filters" role="tablist"></div>
+        <div class="row">
+          <input id="search" type="search" placeholder="Rechercher…">
+          <select id="sort" title="Trier">
+            <option value="default">Ordre de la page</option>
+            <option value="confidence">Confiance ↓</option>
+            <option value="negative">Plus négatifs</option>
+            <option value="positive">Plus positifs</option>
+          </select>
+        </div>
+        <div class="row actions">
+          <button id="copyBtn" class="btn btn-secondary">📋 Copier</button>
+          <button id="csvBtn" class="btn btn-secondary">⬇ Export CSV</button>
+        </div>
+      </div>
+
+      <p id="listInfo" class="muted small"></p>
+      <ul id="commentList" class="comments"></ul>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="config.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

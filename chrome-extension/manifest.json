@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Sentiment Analyzer",
+  "version": "1.0.0",
+  "description": "Analyse le sentiment (positif, neutre, négatif) des commentaires d'une vidéo YouTube.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "http://localhost:8000/*",
+    "http://127.0.0.1:8000/*",
+    "https://*.hf.space/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Analyser les commentaires",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
