@@ -1,0 +1,105 @@
+{
+  "quality": {
+    "n_rows": 37249,
+    "missing_text": 100,
+    "empty_text": 121,
+    "duplicate_texts": 449,
+    "conflicting_duplicates": 0,
+    "contains_url": 28,
+    "contains_mention": 0,
+    "contains_non_ascii": 1950
+  },
+  "class_counts": {
+    "négatif": 8277,
+    "neutre": 13042,
+    "positif": 15830
+  },
+  "class_ratio": {
+    "négatif": 0.223,
+    "neutre": 0.351,
+    "positif": 0.426
+  },
+  "imbalance_ratio_max_min": 1.91,
+  "words_per_comment": {
+    "négatif": {
+      "count": 8277.0,
+      "mean": 34.8,
+      "std": 52.5,
+      "min": 1.0,
+      "50%": 19.0,
+      "95%": 110.2,
+      "max": 865.0
+    },
+    "neutre": {
+      "count": 13042.0,
+      "mean": 9.8,
+      "std": 13.2,
+      "min": 0.0,
+      "50%": 6.0,
+      "95%": 27.0,
+      "max": 518.0
+    },
+    "positif": {
+      "count": 15830.0,
+      "mean": 42.8,
+      "std": 73.6,
+      "min": 1.0,
+      "50%": 21.0,
+      "95%": 147.0,
+      "max": 1307.0
+    }
+  },
+  "top_words": {
+    "négatif": [
+      "people",
+      "bjp",
+      "india",
+      "like",
+      "modi",
+      "just",
+      "don",
+      "congress",
+      "fuck",
+      "shit",
+      "government",
+      "time",
+      "indian",
+      "country",
+      "think"
+    ],
+    "neutre": [
+      "modi",
+      "bjp",
+      "like",
+      "india",
+      "hai",
+      "just",
+      "lot",
+      "people",
+      "don",
+      "time",
+      "congress",
+      "think",
+      "did",
+      "che",
+      "kya"
+    ],
+    "positif": [
+      "people",
+      "india",
+      "like",
+      "good",
+      "bjp",
+      "modi",
+      "just",
+      "don",
+      "think",
+      "right",
+      "time",
+      "congress",
+      "indian",
+      "know",
+      "government"
+    ]
+  }
+}
