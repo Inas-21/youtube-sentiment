@@ -1,0 +1,24 @@
+{
+  "steps": {
+    "raw": 37249,
+    "after_dropna": 37149,
+    "after_drop_empty": 36986,
+    "after_dedup": 36568
+  },
+  "test_size": 0.2,
+  "random_state": 42,
+  "stratified": true,
+  "n_train": 29254,
+  "n_test": 7314,
+  "distribution_train": {
+    "négatif": 6586,
+    "neutre": 10090,
+    "positif": 12578
+  },
+  "distribution_test": {
+    "négatif": 1647,
+    "neutre": 2522,
+    "positif": 3145
+  },
+  "imbalance_strategy": "class_weight='balanced' à l'entraînement (pas de ré-échantillonnage)"
+}
