@@ -1,0 +1,5 @@
+model,cv_accuracy,cv_f1_macro,cv_f1_macro_std,fit_time_s
+LinearSVC,0.8846,0.8737,0.0038,1.1323
+LogisticRegression,0.8472,0.837,0.0063,2.8221
+RandomForest,0.7693,0.7085,0.0033,12.5968
+ComplementNB,0.6572,0.6179,0.0094,0.5454

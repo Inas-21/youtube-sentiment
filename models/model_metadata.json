@@ -1,0 +1,30 @@
+{
+  "model_version": "20261104-100547",
+  "trained_at": "2026-11-04T10:05:47+00:00",
+  "algorithm": "TF-IDF + LogisticRegression",
+  "sklearn_version": "1.7.2",
+  "classes": [
+    -1,
+    0,
+    1
+  ],
+  "label_names": {
+    "-1": "negative",
+    "0": "neutral",
+    "1": "positive"
+  },
+  "best_params": {
+    "clf__C": 10,
+    "tfidf__max_features": null,
+    "tfidf__min_df": 2,
+    "tfidf__ngram_range": [
+      1,
+      1
+    ],
+    "tfidf__sublinear_tf": true
+  },
+  "cv_f1_macro": 0.8661,
+  "cv_accuracy": 0.8767,
+  "n_train": 29254,
+  "vocabulary_size": 22536
+}

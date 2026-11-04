@@ -1,0 +1,55 @@
+{
+  "n_test": 7314,
+  "accuracy": 0.8932,
+  "f1_macro": 0.8837,
+  "f1_weighted": 0.8926,
+  "per_class": {
+    "négatif": {
+      "precision": 0.8336,
+      "recall": 0.8094,
+      "f1-score": 0.8213,
+      "support": 1647.0
+    },
+    "neutre": {
+      "precision": 0.8968,
+      "recall": 0.9647,
+      "f1-score": 0.9295,
+      "support": 2522.0
+    },
+    "positif": {
+      "precision": 0.9217,
+      "recall": 0.8798,
+      "f1-score": 0.9003,
+      "support": 3145.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1333,
+      119,
+      195
+    ],
+    [
+      49,
+      2433,
+      40
+    ],
+    [
+      217,
+      161,
+      2767
+    ]
+  ],
+  "latency_batch_50": {
+    "batch_size": 50,
+    "runs": 100,
+    "mean_ms": 37.68,
+    "p95_ms": 57.64,
+    "max_ms": 68.01
+  },
+  "criteria": {
+    "accuracy >= 0.8": true,
+    "f1 par classe > 0.75": true,
+    "latence p95 (50 comm.) < 100 ms": true
+  }
+}
