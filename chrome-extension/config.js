@@ -2,7 +2,7 @@
 // Après le déploiement, remplacer apiUrl par l'URL publique du Codespace
 // (https://<nom>-7860.app.github.dev) ou la saisir dans le panneau ⚙.
 const DEFAULT_SETTINGS = {
-  apiUrl: "http://localhost:8000",
+  apiUrl: "https://opulent-fiesta-97jq7w6pj9pv27qj9-7860.app.github.dev",  // local : http://localhost:8000
   maxComments: 100,
   includeReplies: false,
   autoScroll: true,
