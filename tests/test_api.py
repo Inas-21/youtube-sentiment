@@ -60,6 +60,29 @@ def test_invalid_payloads(client, payload):
     assert client.post("/predict_batch", json=payload).status_code == 422
 
 
+def test_long_comment_truncated_not_rejected(client):
+    r = client.post("/predict_batch", json={"comments": ["great " * 3000]})
+    assert r.status_code == 200
+    assert len(r.json()["predictions"][0]["text"]) == 5000
+
+
+def test_response_time_batch_100(client):
+    comments = [f"really nice video {i}" for i in range(100)]
+    client.post("/predict_batch", json={"comments": comments})  # échauffement
+    r = client.post("/predict_batch", json={"comments": comments})
+    assert r.status_code == 200
+    assert r.json()["processing_time_ms"] < 200
+    assert float(r.headers["X-Process-Time-Ms"]) < 500
+
+
+def test_unknown_route_404(client):
+    assert client.get("/does-not-exist").status_code == 404
+
+
+def test_wrong_method_405(client):
+    assert client.get("/predict_batch").status_code == 405
+
+
 def test_cors_header(client):
     r = client.options("/predict_batch", headers={
         "Origin": "chrome-extension://abcdef", "Access-Control-Request-Method": "POST"})

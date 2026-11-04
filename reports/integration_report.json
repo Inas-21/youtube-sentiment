@@ -1,0 +1,55 @@
+{
+  "local": {
+    "url": "http://127.0.0.1:8000",
+    "health": {
+      "status_code": 200,
+      "body": {
+        "status": "ok",
+        "model_loaded": true,
+        "model_version": "20261104-100547",
+        "algorithm": "TF-IDF + LogisticRegression",
+        "uptime_seconds": 4860.1
+      },
+      "latency_ms": 12.4
+    },
+    "errors": {
+      "batch vide": 422,
+      "commentaire vide": 422,
+      "batch > 500": 422,
+      "mauvais type": 422,
+      "champ manquant": 422
+    },
+    "latency": [
+      {
+        "batch_size": 1,
+        "total_mean_ms": 24.7,
+        "total_max_ms": 32.0,
+        "model_mean_ms": 4.2
+      },
+      {
+        "batch_size": 10,
+        "total_mean_ms": 32.7,
+        "total_max_ms": 44.5,
+        "model_mean_ms": 9.4
+      },
+      {
+        "batch_size": 50,
+        "total_mean_ms": 51.5,
+        "total_max_ms": 65.6,
+        "model_mean_ms": 28.5
+      },
+      {
+        "batch_size": 100,
+        "total_mean_ms": 90.3,
+        "total_max_ms": 115.8,
+        "model_mean_ms": 70.6
+      },
+      {
+        "batch_size": 500,
+        "total_mean_ms": 394.1,
+        "total_max_ms": 437.2,
+        "model_mean_ms": 352.9
+      }
+    ]
+  }
+}
