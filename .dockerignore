@@ -1,0 +1,12 @@
+# Tout exclure par défaut, puis n'autoriser que le nécessaire au runtime
+*
+!requirements.txt
+!app_api.py
+!src/
+!models/vectorizer.joblib
+!models/model.joblib
+!models/model_metadata.json
+
+# Exclusions à l'intérieur des dossiers autorisés
+**/__pycache__
+**/*.py[oc]

@@ -8,7 +8,7 @@
     "https://www.youtube.com/*",
     "http://localhost:8000/*",
     "http://127.0.0.1:8000/*",
-    "https://*.hf.space/*"
+    "https://*.app.github.dev/*"
   ],
   "action": {
     "default_popup": "popup.html",
